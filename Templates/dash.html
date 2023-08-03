@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/style.css')}}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>First Page</h1>
+    <h2>Second Heading</h2>
+    <h3>Third Heading</h3>
+    <p>Today is {{date}} and the time is {{time}}</p>
+
+    <!--Use Ordered and Unordered Lists-->
+    <div class="divide">
+    <ol>
+        <li>List Item One</li>
+        <li>List Item Two</li>
+    </ol>
+    </div>
+    <div class="divide">
+        <ul>
+            <li>First List Item</li>
+            <li>Second List Item</li>
+        </ul>
+    </div>
+    
+    <br>
+    <a href="https://www.espn.com/">Visit ESPN</a>
+    <a href="https://www.google.com">Search Google</a>
+    <a href="https://youtube.com">Stream on Youtube</a>
+    <br>
+    {% if message %}
+    <div class="success">
+        {{ message }}
+    </div>
+    {% endif %}
+    <h3>Update Password</h3>
+    <P>If you'd like to update your password, fill out the form below</P>
+    <form method="POST" action="/update_password">
+        <label for="current_password">Current Password:</label>
+        <input type="password" id="current_password" name="current_password" required><br><br>
+        <label for="new_password">New Password:</label>
+        <input type="password" id="new_password" name="new_password" required><br><br>
+        <label for="confirm_password">Confirm New Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+        <input type="submit" value="Update Password">
+    </form>
+    <br>
+    <a href="/second.html">Check out the Wicked Second Page</a>
+    <a href="/third.html">And the Third one??</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

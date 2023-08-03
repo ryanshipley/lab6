@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/style.css')}}">
+    <title>Page Two</title>
+</head>
+<body>
+    <h1>Second Page</h1>
+    <h2>Second Heading</h2>
+    <h3>Third Heading</h3>
+    <p>Today is {{date}} and the time is {{time}}</p>
+    <!--Use Ordered and Unordered Lists-->
+    <div class="divide">
+    <ol>
+        <li>List Item One</li>
+        <li>List Item Two</li>
+    </ol>
+    </div>
+    <div class="divide">
+        <ul>
+            <li>First List Item</li>
+            <li>Second List Item</li>
+        </ul>
+    </div>
+    <img src="{{ url_for('static', filename='Frog.jpeg') }}" alt="Frog">
+    <img src="{{ url_for('static', filename='Python.jpeg') }}" alt="Python">
+    <img src="{{ url_for('static', filename='Dumont.jpeg') }}" alt="Dumont">
+    <img src="{{ url_for('static', filename='Husky.jpeg') }}" alt="Husky">
+
+    <br>
+    <a href="https://www.espn.com/">Visit ESPN</a>
+    <a href="https://www.google.com">Search Google</a>
+    <a href="https://youtube.com">Stream on Youtube</a>
+    <br>
+    <a href="/third.html">And the Third one??</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>
